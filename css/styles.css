@@ -1,0 +1,378 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    }
+
+:root {
+    --dark: rgb(48, 48, 48);
+    --light:rgba(255,255,255,1);
+}
+
+
+.section {
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+        background: var(--light);
+    }
+
+
+    .container, .container-floor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .container-floor {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .container-spacing {
+        min-height: 290px;
+    }
+
+    .cactuar {
+        position: absolute;
+        transform: rotate(-16deg);
+        animation-duration: 1s;
+        animation-name: cactuar-jump;
+        animation-iteration-count: infinite;
+    }
+
+    
+    @keyframes cactuar-jump {
+        from {
+            bottom: 0px;
+        }
+
+        to {
+           bottom: 20px;
+        }
+    }
+
+
+    .relative {
+        position: relative;
+    }
+
+    .spikes {
+        position: absolute;
+        top: -20px;
+        left: 20px;
+        width: 30px;
+    }
+
+    .single-spike-left, .single-spike-middle, .single-spike-right {
+        background: var(--dark);
+        position: absolute;
+        height: 60px;
+        width: 8px;
+        border-radius: 10px 30px / 120px;
+    }
+
+    .single-spike-left {
+        left: 0;
+        transform: rotate(-12deg);
+    }
+
+    .single-spike-middle {
+        left: 10px;
+    }
+
+    .single-spike-right {
+        left: 20px;
+        transform: rotate(12deg);
+    }
+
+    .cactuar-body {
+        position: relative;
+        width: 70px;
+        height: 210px;
+        background: var(--dark);
+        border-radius: 50px 50px 0 0;
+    }
+
+    .face {
+        position: absolute;
+        width: 40px;
+        height: 50px;
+        top: 46px;
+        left: 14px;
+    }
+    
+
+    .eye-left, .eye-right {
+        background: var(--light);
+        position: absolute;
+        border-radius: 50px;
+        width: 15px;
+        height: 15px;
+        top: 0;
+
+    }
+
+    .eye-left {
+        left: 0;
+    }
+
+    .eye-right {
+        right: 0;
+    }
+
+    .mouth {
+        background: var(--light);
+        position: absolute;
+        width: 15px;
+        height: 30px;
+        border-radius: 50px;
+        top: 24px;
+        left: 12px;
+    }
+
+    .left-arm {
+        background: var(--dark);
+        position: absolute;
+        left: -54px;
+        top: 100px; 
+        height: 30px;
+        width: 70px;
+        border-radius: 20px;
+    }
+
+    .left-wrist, .left-wrist-bottom {
+        background: var(--dark);
+        position: absolute;
+        height: 70px;
+        width: 30px;
+        border-radius: 20px;
+    }
+    
+    .left-wrist {
+        left: -54px;
+        top: 56px;
+        animation-duration: .5s;
+        animation-name: left-arm-one;
+        animation-iteration-count: infinite;
+        }
+
+    .left-wrist-bottom {
+        top: 100px;
+        left:-54px;
+        animation-duration: .5s;
+        animation-name: left-arm-two;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes left-arm-one {
+        from {
+            opacity: 1;
+        }
+
+        to {
+           opacity: 0;
+        }
+    }
+
+    @keyframes left-arm-two {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .right-arm {
+        background: var(--dark);
+        position: absolute;
+        left: 54px;
+        top: 100px; 
+        height: 30px;
+        width: 70px;
+        border-radius: 20px;
+    }
+
+    .right-wrist, .right-wrist-top {
+        background: var(--dark);
+        position: absolute;
+        height: 70px;
+        width: 30px;
+        border-radius: 0 20px 20px 20px;
+    }
+
+    .right-wrist {
+        right: -54px;
+        top: 60px;
+        border-radius: 20px;
+        animation-duration: .5s;
+        animation-name: right-arm-one;
+        animation-iteration-count: infinite;
+    }
+
+    .right-wrist-top {
+        right: -54px;
+        top: 100px;
+        animation-duration: .5s;
+        animation-name: right-arm-two;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes right-arm-one {
+        from {
+            opacity: 0;
+            transition: none;
+        }
+
+        to {
+           opacity: 1;
+           transition: none;
+        }
+    }
+
+    @keyframes right-arm-two {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    .left-leg-group {
+        position: absolute;
+        bottom: 0;
+        animation-duration: 1s;
+        animation-name: left-leg-rotate;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes left-leg-rotate {
+        from {
+            transform:rotate(0);
+        }
+
+        to {
+           transform: rotate(-10deg);
+        }
+    }
+
+    @keyframes right-arm-two {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    .left-leg {
+        background: var(--dark);
+        position: absolute;
+        bottom: 0;
+        height: 34px;
+        width: 70px;
+        left: -40px;
+        border-radius: 20px 0 0 0;
+    }
+
+    .left-foot {
+        background: var(--dark);
+        position: absolute;
+        bottom: 0;
+        height: 90px;
+        width: 34px;
+        left: -40px;
+        bottom: -60px;
+        border-radius: 20px 0 20px 20px;  
+    }
+
+    .right-leg-group {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        animation-duration: 1s;
+        animation-name: left-leg-rotate;
+        animation-iteration-count: infinite;
+    }
+
+    .right-leg {
+        background: var(--dark);
+        position: absolute;
+        bottom: 0;
+        height: 70px;
+        width: 34px;
+        right: 0;
+        bottom: -50px;
+        border-radius: 0 0 0 20px;
+    }
+
+    .right-foot {
+        background: var(--dark);
+        position: absolute;
+        bottom: 0;
+        height: 34px;
+        width: 80px;
+        right: -50px;
+        bottom: -50px;
+        border-radius: 20px;  
+    }
+
+    .floor-top {
+        background: var(--dark);
+        height: 10px;
+        border-radius: 20px;
+        margin: 4px;
+        width: 150px;
+        overflow: hidden;
+    }
+
+    .floor-bottom {
+        background: var(--dark);
+        height: 10px;
+        border-radius: 20px;
+        margin: 4px;
+        width: 250px;
+        overflow: hidden;
+    }
+
+    .gradient {
+        height: 100%;
+        position: absolute;
+        width: 50px;
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0) 100%);
+        animation-duration: 1s;
+        animation-name: gradient;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes gradient {
+        from {
+            left: -40%;
+        }
+
+        to {
+            left: 100%;
+        }
+    }
+
+    .no-transition {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+    }
+
