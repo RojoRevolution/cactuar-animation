@@ -14,7 +14,6 @@ html {
     --dark: rgb(48, 48, 48);
     --light:rgba(255,255,255,1);
     /* ==== Adjust to Change Size === */
-    /* < 1 = smaller || > 1 = larger */
     --scale-size: 1;
     /* ==== Adjust to change floor shimmer === */
     --gradient-bg: rgba(255,255,255,1);
