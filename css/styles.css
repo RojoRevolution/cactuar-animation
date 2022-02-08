@@ -10,13 +10,21 @@ html {
     }
 
 :root {
+    /* ==== Adjust to Change colors === */
     --dark: rgb(48, 48, 48);
     --light:rgba(255,255,255,1);
+    /* ==== Adjust to Change Size === */
+    /* < 1 = smaller || > 1 = larger */
+    --scale-size: 1;
+    /* ==== Adjust to change floor shimmer === */
+    --gradient-bg: rgba(255,255,255,1);
+    --gradient-edge: rgba(255,255,255,0);
+    --gradient-center: rgba(255,255,255,.5);
 }
 
 
 .outer-container {
-        transform:scale(1);
+        transform:scale(var(--scale-size));
         width: 100%;
         height: auto;
         padding: 2rem;
@@ -353,8 +361,8 @@ html {
         height: 100%;
         position: absolute;
         width: 50px;
-        background: rgb(255,255,255);
-        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+        background: var(--gradient-bg);
+        background: linear-gradient(90deg, var(--gradient-edge) 0%, var(--gradient-edge) 50%, var(--gradient-center) 100%);
         animation-duration: 1s;
         animation-name: gradient;
         animation-iteration-count: infinite;
